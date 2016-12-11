@@ -1,0 +1,73 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    color: #98C1D9;
+}
+
+#header {
+    flex: 2 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4B244A;
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+#thumbnails {
+    flex: 15 1 auto;
+    background: #533A7B;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#thumbnails > img {
+    height: 150px;
+    border: 3px white solid;
+    cursor: pointer;
+}
+
+#footer {
+    flex: 1 1 auto;
+    background: #4B244A;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+}
+
+#overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0, 0.5); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    visibility: hidden;
+    text-align: center;
+
+}
+
+#overlay > img {
+    max-height: 80%;
+    max-width: 80%;
+    margin-top: 4%;
+    position: relative; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    border: 3px white solid;
+    cursor: pointer;
+}
